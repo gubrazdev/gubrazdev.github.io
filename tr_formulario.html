@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--favicon-->
+        <link rel="icon" href="favicon.png" sizes="16x16">
+        <title>Formulário</title>
+    </head>
+    <body>
+        <!--links-->
+        <nav>    
+            <a href="index.html" tabindex="1">Início</a>
+            |
+            <a href="tr_contato.html">Contato</a>
+        </nav>            
+                        <hr>
+        <h1>Cadastre seu carro</h1>
+
+        <br><br>
+        
+        <form>
+            <!--Dados pessoais-->
+            <fieldset>
+                <legend>Dados pessoais</legend>
+
+                <label for="nome">Nome:</label><br>
+                    <input type="text" name="nome" id="nome" placeholder="Digite o seu nome completo" size="30" required>
+                   
+                    <br><br>
+
+                <label for="sexo">Sexo:</label><br>
+                    M<input type="radio" id="sexo" name="sexo" value="M">
+                    F<input type="radio" id="sexo" name="sexo" value="F">
+                    
+                    <br><br>
+
+                <label for="idade">Idade:</label><br>
+                    <input type="number" id="nome" name="nome" min="18" required>
+                    
+                    <br><br>
+
+                <label for="telefone">Telefone:</label><br>
+                    <input type="text" id="telefone" name="telefone" maxlength="12" required>
+            </fieldset>
+            <!--Informações do carro-->
+            <fieldset>
+                <legend>Informações do carro</legend>
+
+                <label for="placa">Placa:</label><br>
+                    <input type="text" id="placa" placeholder="Digite a placa do seu carro" maxlength="7" required>
+                
+                    <br><br>
+                
+                <label for="modelo">Modelo:</label><br>
+                    <input type="text" id="modelo" name="modelo" required>
+
+                    <br><br>
+
+                <label for="cor">Cor do veículo:</label><br>
+                    <input type="color" id="cor" name="cor">
+
+                    
+            </fieldset>
+            <br>
+            <!--Botões de cadastrar e limpar-->
+            <input type="submit" value="Cadastrar📤">
+            <input type="submit" value="Limpar🧹">
+        </form>
+    </body>
+</html>
