@@ -2,27 +2,77 @@
 <html>
     <head>
 <!--favicon-->
-          <link rel="icon" href="favicon.png" sizes="16x16">
+        <link rel="icon" href="favicon.png" sizes="16x16">
         <title>Concessionária</title>
+        <style>
+              body{
+                font-family: 'Times New Roman', Times, serif;
+                background: linear-gradient(black , red);
+                background-attachment: fixed;
+                color: white;
+                margin: auto;
+                height: 100vh;
+            }
+            nav{
+                padding: 20px;
+                background-color: black;
+                text-align: center;
+            }
+            nav a{
+                color: white;
+                font-size: 20px;
+                padding-left: 20px;
+                text-decoration: none;
+            }
+            nav#ancora{
+                background-color: rgb(151, 21, 21);
+            }
+            p{
+                text-align: justify;
+                 padding: 0 20px;
+            }
+            #marca_texto{
+                color: white;
+            }
+            img{
+                display: block;
+                margin: 0 auto;
+
+            }
+            h2{
+                text-align: center;
+            }
+            #tabela{
+                background-color: aliceblue;
+                color: black;
+                align-items: center;
+                text-align: center;
+                margin: 0 auto; /* Centraliza na página */
+            }
+            ul{
+                padding: 20px;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+        </style>
     </head>
     <body>
         <nav>
             <a href="tr_contato.html" >Contato</a>
-            |
             <a href="tr_formulario.html">Cadastre-se</a>
         </nav>            
-                        <hr>
+        
 <!--ancoragem-->                        
-        <nav>
+        <nav id="ancora">
           <a href="#concessionaria">Tabela de preços</a>
-          |
           <a href="#serviços">Serviços</a>
         </nav>
                         <hr width="175" align="left" color="black">    
 <!--sobre a empresa-->            
+        <section>
             <h1>Nossa empresa</h1>
-                <p style="text-align: justify;">
-                A <strong><mark style="background-color: #f10000;"><i>Concessionária do Cotil</i></mark></strong> 
+                <p>
+                A <strong><mark id="marca_texto" style="background-color: #f10000;"><i>Concessionária do Cotil</i></mark></strong> 
                 é uma empresa voltada para a <strong>venda de automóveis novos e semi-novos</strong>, 
                 dispondo de um alto nível de qualidade, segurança e um excelente atendimento aos seus 
                 clientes. Com uma equipe capacitada para auxiliar na escolha do seu automóvel, a 
@@ -34,9 +84,9 @@
         <img src="mascote.png" width="550">
 
 <!--Tabela de carros-->
-        <h2 id="concessionaria">Concessionária do Cotil</h2>
+        <h2>Concessionária do Cotil</h2>
 
-        <table border="1px" bordercolor="black" cellspacing="0" cellpadding="10">
+        <table id="tabela" border="1px" bordercolor="black" cellspacing="0" cellpadding="10">
             <tr>
                 <th>Foto</th>
                 <th>Carro</th>
@@ -61,9 +111,9 @@
         </table>
 
 <!--lista de serviços-->     
-        <h2 id="serviços">Serviços</h2>
+        <h2>Serviços</h2>
      
-        <ul>
+        <ul id="servicos">
             <li>Venda de carros</li>
             <li>Restauração de peças</li>
             <li>Lavagem de carros</li>

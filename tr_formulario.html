@@ -4,66 +4,137 @@
         <!--favicon-->
         <link rel="icon" href="favicon.png" sizes="16x16">
         <title>Formulário</title>
+        <style>
+            body{
+                font-family: 'Times New Roman', Times, serif;
+                background: linear-gradient(black , red);
+                background-attachment: fixed;
+                margin: auto;
+                height: 100vh;
+            }
+            nav{
+                padding: 20px;
+                background-color: black;
+                text-align: center;
+            }
+            nav a{
+                color: white;
+                font-size: 20px;
+                padding-left: 20px;
+                text-decoration: none;
+            }
+            h1{
+                color: white;
+                text-align: center;
+                font-size: 50px;
+            }
+            #form{
+
+                padding: 20px;
+                margin: 20px;
+                background-color: #f5f5f5;
+                border-radius: 20px;
+                box-shadow: 20px 20px 100px; 
+            }
+            legend{
+                margin-bottom: 20px;
+                text-align: center;
+                font-size: 30px;
+            }
+            input[type="text"],
+            input[type="number"]{
+                width: 80%;
+                background-color: #f5f5f5;
+                border: 0;
+                border-bottom: 1px solid red;
+            }
+            input[type="text"]:hover,
+            input[type="number"]:hover{
+                border-bottom: 1px solid black;
+            }
+            input[type="submit"]{
+                margin-top: 20px;
+                padding: 10px 15px;
+                background: linear-gradient(90deg, red, black );
+                border: none;
+                border-radius: 10px;
+                color: #f2f2f2;
+            }
+            input[type="submit"]:hover{
+                background: linear-gradient(90deg, black, red);
+            }
+            input[type=reset]{
+            margin-top: 20px;
+            padding: 10px 15px;
+            background: linear-gradient(black,red );
+            border: none;
+            border-radius: 10px;
+            color: #f2f2f2;
+            }
+            input[type="reset"]:hover{
+                background: linear-gradient(red, black);
+            }
+        </style>
     </head>
     <body>
         <!--links-->
         <nav>    
             <a href="index.html" tabindex="1">Início</a>
-            |
+            
             <a href="tr_contato.html">Contato</a>
         </nav>            
-                        <hr>
+
         <h1>Cadastre seu carro</h1>
 
         <br><br>
         
-        <form>
-            <!--Dados pessoais-->
-            <fieldset>
-                <legend>Dados pessoais</legend>
+        <div id="form">
+            <form>
+                <!--Dados pessoais-->
 
-                <label for="nome">Nome:</label><br>
-                    <input type="text" name="nome" id="nome" placeholder="Digite o seu nome completo" size="30" required>
-                   
-                    <br><br>
-
-                <label for="sexo">Sexo:</label><br>
-                    M<input type="radio" id="sexo" name="sexo" value="M">
-                    F<input type="radio" id="sexo" name="sexo" value="F">
                     
-                    <br><br>
+                        <legend>Dados pessoais</legend>
+                        
+                        <label for="nome">Nome:</label><br>
+                        <input type="text" name="nome" id="nome" placeholder="Digite o seu nome completo" size="30" required>
+                        
+                        <br><br>
+                        
+                        <label for="sexo">Sexo:</label><br>
+                        M<input type="radio" id="sexo" name="sexo" value="M">
+                        F<input type="radio" id="sexo" name="sexo" value="F">
+                        
+                        <br><br>
+                        
+                        <label for="idade">Idade:</label><br>
+                        <input type="number" id="nome" name="nome" min="18" required>
+                        
+                        <br><br>
 
-                <label for="idade">Idade:</label><br>
-                    <input type="number" id="nome" name="nome" min="18" required>
+                        <label for="telefone">Telefone:</label><br>
+                        <input type="text" id="telefone" name="telefone" maxlength="12" required>
+            
+            
+                        <br><br>
                     
-                    <br><br>
-
-                <label for="telefone">Telefone:</label><br>
-                    <input type="text" id="telefone" name="telefone" maxlength="12" required>
-            </fieldset>
-            <!--Informações do carro-->
-            <fieldset>
-                <legend>Informações do carro</legend>
-
-                <label for="placa">Placa:</label><br>
+                    <label for="placa">Placa do carro:</label><br>
                     <input type="text" id="placa" placeholder="Digite a placa do seu carro" maxlength="7" required>
-                
-                    <br><br>
-                
-                <label for="modelo">Modelo:</label><br>
-                    <input type="text" id="modelo" name="modelo" required>
-
-                    <br><br>
-
-                <label for="cor">Cor do veículo:</label><br>
-                    <input type="color" id="cor" name="cor">
-
                     
-            </fieldset>
-            <br>
-            <!--Botões de cadastrar e limpar-->
-            <input type="submit" value="Cadastrar📤">
-            <input type="submit" value="Limpar🧹">
-        </form>
+                    <br><br>
+                    
+                    <label for="modelo">Modelo:</label><br>
+                    <input type="text" id="modelo" name="modelo" required>
+                    
+                    <br><br>
+                    
+                    <label for="cor">Cor do veículo:</label><br>
+                    <input type="color" id="cor" name="cor">
+                
+                    <br>
+                    <!--Botões de cadastrar e limpar-->
+                    <input type="submit" value="Cadastrar📤">
+                    <input type="reset" value="Limpar🧹">
+            </form>
+        </div>
     </body>
 </html>
