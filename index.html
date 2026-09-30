@@ -39,20 +39,38 @@
                 margin: 0 auto;
 
             }
+            #mascote {
+                display: block;
+                margin: 0 auto;
+                transition: transform 0.5s ease;
+            }
+
+            #mascote:hover {
+                transform: scale(1.2);
+            }
             h2{
                 text-align: center;
+                padding: 40px;
+                font-size: 30px;
             }
-            #tabela{
+            h3{
+                text-align: center;
+                padding: 20px;
+                font-size: 25px;
+            }
+            .tabela{
                 background-color: aliceblue;
                 color: black;
                 align-items: center;
                 text-align: center;
                 margin: 0 auto; /* Centraliza na página */
+                box-shadow: 10px 10px 10px rgb(255, 91, 91);
             }
             ul{
                 padding: 20px;
                 max-width: 300px;
-                margin: 0 auto;
+                margin: 0 auto; /* Centraliza na página */
+                background-color: rgb(151, 21, 21);
             }
         </style>
     </head>
@@ -65,7 +83,7 @@
 <!--ancoragem-->                        
         <nav id="ancora">
           <a href="#concessionaria">Tabela de preços</a>
-          <a href="#serviços">Serviços</a>
+          <a href="#servicos">Serviços</a>
         </nav>
                         <hr width="175" align="left" color="black">    
 <!--sobre a empresa-->            
@@ -81,12 +99,12 @@
         </section>
 <!--Mascote-->
         <h2>Aqui o nosso mascote</h2>
-        <img src="mascote.png" width="550">
+        <img id="mascote" src="mascote.png" width="550">
 
 <!--Tabela de carros-->
         <h2>Concessionária do Cotil</h2>
 
-        <table id="tabela" border="1px" bordercolor="black" cellspacing="0" cellpadding="10">
+        <table id="concessionaria" class="tabela" border="1px" bordercolor="black" cellspacing="0" cellpadding="10">
             <tr>
                 <th>Foto</th>
                 <th>Carro</th>
@@ -111,7 +129,7 @@
         </table>
 
 <!--lista de serviços-->     
-        <h2>Serviços</h2>
+        <h3>Serviços</h3>
      
         <ul id="servicos">
             <li>Venda de carros</li>
